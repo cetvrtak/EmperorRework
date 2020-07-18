@@ -13,9 +13,18 @@ province_event = {
 			is_core = ROOT
 			capital_scope = { is_part_of_hre = yes }
 			num_of_cities = 2
+			# From The Louisiana Purchase event
 			OR = {
-				num_of_loans = 5
 				is_bankrupt = yes
+				is_in_large_debt = yes
+				AND = {
+					NOT = { treasury = 500 }
+					NOT = { monthly_income = 10 }
+				}
+				AND = {
+					NOT = { treasury = 250 }
+					NOT = { monthly_income = 20 }
+				}
 			}
 		}
 		is_capital = no
@@ -70,9 +79,7 @@ province_event = {
 	option = {
 		name = freecities.1.a
 		add_development_scaled_income = yes
-		owner = {
-			add_prestige = -5
-		}
+		owner = { add_prestige = -5 }
 		custom_tooltip = releasable_free_city_tooltip
 	}
 }
@@ -268,6 +275,16 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		FROM = {
+			add_province_modifier = {
+				name = "offered_free_city_status"
+				duration = 30
+				hidden = yes
+			}
+		}
+	}
+
 	option = {
 		name = freecities.7.a
 		FROM = {
@@ -294,36 +311,31 @@ country_event = {
 
 	option = {
 		name = freecities.7.b
-		FROM = {
-			add_province_modifier = {
-				name = "declined_free_city_status"
-				duration = 30
-				hidden = yes
-			}
-		}
 		if = {
 			limit = {
 				FROM = {
 					owner = {
 						any_owned_province = {
 							NOT = { id = FROM }
-							NOT = { has_province_modifier = declined_free_city_status }
+							NOT = { has_province_modifier = offered_free_city_status }
 							has_province_flag = releasable_free_city
 							any_core_country = { exists = no }
 						}
 					}
 				}
 			}
-			FROM = {
-				owner = {
-					random_owned_province = {
-						limit = {
-							NOT = { id = FROM }
-							NOT = { has_province_modifier = declined_free_city_status }
-							has_province_flag = releasable_free_city
-							any_core_country = { exists = no }
+			hidden_effect = {
+				FROM = {
+					owner = {
+						random_owned_province = {
+							limit = {
+								NOT = { id = FROM }
+								NOT = { has_province_modifier = offered_free_city_status }
+								has_province_flag = releasable_free_city
+								any_core_country = { exists = no }
+							}
+							province_event = { id = freecities.6 }
 						}
-						province_event = { id = freecities.6 }
 					}
 				}
 			}

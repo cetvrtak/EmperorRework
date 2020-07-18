@@ -6,4 +6,4 @@ free_city_charter_extinction = {
 	local_autonomy = 0.1
 }
 
-declined_free_city_status = {}
+offered_free_city_status = {}
