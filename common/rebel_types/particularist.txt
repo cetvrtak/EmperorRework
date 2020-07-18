@@ -191,7 +191,7 @@ particularist_rebels = {
 		if = {
 			limit = { is_part_of_hre = yes }
 			add_province_modifier = {
-				name = "releasable_free_city"
+				name = "free_city_charter"
 				duration = 3650
 			}
 		}

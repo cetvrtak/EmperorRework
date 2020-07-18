@@ -57,7 +57,7 @@ release_free_city = {
 	alert_index = 40
 	alert_tooltip = demand_dummy_alert_tooltip
 
-	require_acceptance = yes # Whether the recipient gets an option to decline
+	#require_acceptance = yes # Whether the recipient gets an option to decline
 
 	is_visible = {
 		is_emperor = yes
@@ -66,14 +66,43 @@ release_free_city = {
 			num_of_cities = 2
 			any_owned_province = {
 				has_province_flag = releasable_free_city
+				any_core_country = { exists = no }
 			}
 		}
 	}
 	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = available_free_city_slots_tooltip
+			OR = {
+				AND = {
+					hre_reform_passed = emperor_reichstag_collegia
+					NOT = {
+						calc_true_if = {
+							all_country = {
+								has_reform = free_city
+							}
+							amount = 15
+						}
+					}
+				}
+				NOT = {
+					calc_true_if = {
+						all_country = {
+							has_reform = free_city
+						}
+						amount = 12
+					}
+				}
+			}
+		}
 		FROM = {
 			is_at_war = no
-			any_owned_province = {
-				has_province_flag = releasable_free_city
+			custom_trigger_tooltip = {
+				tooltip = eligible_free_cities_tooltip
+				any_owned_province = {
+					has_province_flag = releasable_free_city
+					any_core_country = { exists = no }
+				}
 			}
 		}
 	}
@@ -81,41 +110,24 @@ release_free_city = {
 		FROM = {
 			random_owned_province = {
 				limit = {
+					NOT = { has_province_modifier = declined_free_city_status }
 					has_province_flag = releasable_free_city
+					any_core_country = { exists = no }
 				}
-				random_core_country = {
-					limit = {
-						NOT = { tag = PREV }
-					}
-					save_event_target_as = releasable_free_city
-				}
-				cede_province = event_target:releasable_free_city
-				event_target:releasable_free_city = {
-					change_government_to_republic = yes
-					add_government_reform = free_city
-					if = {
-						limit = {
-							NOT = { religion = PREV }
-						}
-						change_religion = PREV
-					}
-					every_owned_province = {
-						clr_province_flag = releasable_free_city
-					}
-				}
+				province_event = { id = freecities.6 }
 			}
 		}
 	}
-	on_decline =
-	{
-		add_trust = {
-			who = FROM
-			value = -100
-			mutual = no
-		}
-	}
+	#on_decline =
+	#{
+	#	add_trust = {
+	#		who = FROM
+	#		value = -100
+	#		mutual = no
+	#	}
+	#}
 
-	ai_acceptance = { # This works similarly to variable_arithmetic_trigger, but does not support triggers generally. Instead, "limit" will be evaluated first and the rest ignored if it isn't passed.
+	#ai_acceptance = { # This works similarly to variable_arithmetic_trigger, but does not support triggers generally. Instead, "limit" will be evaluated first and the rest ignored if it isn't passed.
 		#add_entry = {
 		#	name = TRUST
 		#	limit = { religion = catholic }
@@ -151,17 +163,17 @@ release_free_city = {
 		#	}
 		#	#subtract_variable = { which = ai_value value = 50 }
 		#}
-		add_entry = {
-			name = OPINION
-			export_to_variable = {
-				variable_name = ai_value
-				value = 1	#opinion
-				#who = FROM
-				#with = THIS
-			}
-			#divide_variable = { which = ai_value value = 4 }
-		}
-	}
+		#add_entry = {
+		#	name = OPINION
+		#	export_to_variable = {
+		#		variable_name = ai_value
+		#		value = 1	#opinion
+		#		#who = FROM
+		#		#with = THIS
+		#	}
+		#	#divide_variable = { which = ai_value value = 4 }
+		#}
+	#}
 
 	ai_will_do = { # this is a trigger
 		has_opinion_modifier = {

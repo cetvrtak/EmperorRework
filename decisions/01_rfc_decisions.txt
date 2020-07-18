@@ -1,0 +1,33 @@
+country_decisions = {
+	
+	release_free_city_decision = {
+		potential = {
+			is_emperor = yes
+			any_owned_province = {
+				has_province_flag = releasable_free_city
+				any_core_country = { exists = no }
+			}
+		}
+		allow = {
+			is_at_war = no
+			any_owned_province = {
+				NOT = { has_province_modifier = declined_free_city_status }
+				has_province_flag = releasable_free_city
+				any_core_country = { exists = no }
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					NOT = { has_province_modifier = declined_free_city_status }
+					has_province_flag = releasable_free_city
+					any_core_country = { exists = no }
+				}
+				province_event = { id = freecities.6 }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

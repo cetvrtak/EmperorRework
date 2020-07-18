@@ -1,0 +1,86 @@
+add_development_scaled_income = {
+	if = {
+		limit = { development = 30 }
+		owner = { add_years_of_income = 3.0 }
+	}
+	else_if = {
+		limit = { development = 29 }
+		owner = { add_years_of_income = 2.9 }
+	}
+	else_if = {
+		limit = { development = 28 }
+		owner = { add_years_of_income = 2.8 }
+	}
+	else_if = {
+		limit = { development = 27 }
+		owner = { add_years_of_income = 2.7 }
+	}
+	else_if = {
+		limit = { development = 26 }
+		owner = { add_years_of_income = 2.6 }
+	}
+	else_if = {
+		limit = { development = 25 }
+		owner = { add_years_of_income = 2.5 }
+	}
+	else_if = {
+		limit = { development = 24 }
+		owner = { add_years_of_income = 2.4 }
+	}
+	else_if = {
+		limit = { development = 23 }
+		owner = { add_years_of_income = 2.3 }
+	}
+	else_if = {
+		limit = { development = 22 }
+		owner = { add_years_of_income = 2.2 }
+	}
+	else_if = {
+		limit = { development = 21 }
+		owner = { add_years_of_income = 2.1 }
+	}
+	else_if = {
+		limit = { development = 20 }
+		owner = { add_years_of_income = 2.0 }
+	}
+	else_if = {
+		limit = { development = 19 }
+		owner = { add_years_of_income = 1.9 }
+	}
+	else_if = {
+		limit = { development = 18 }
+		owner = { add_years_of_income = 1.8 }
+	}
+	else_if = {
+		limit = { development = 17 }
+		owner = { add_years_of_income = 1.7 }
+	}
+	else_if = {
+		limit = { development = 16 }
+		owner = { add_years_of_income = 1.6 }
+	}
+	else_if = {
+		limit = { development = 15 }
+		owner = { add_years_of_income = 1.5 }
+	}
+	else_if = {
+		limit = { development = 14 }
+		owner = { add_years_of_income = 1.4 }
+	}
+	else_if = {
+		limit = { development = 13 }
+		owner = { add_years_of_income = 1.3 }
+	}
+	else_if = {
+		limit = { development = 12 }
+		owner = { add_years_of_income = 1.2 }
+	}
+	else_if = {
+		limit = { development = 11 }
+		owner = { add_years_of_income = 1.1 }
+	}
+	else = {
+		limit = { development = 10 }
+		owner = { add_years_of_income = 1.0 }
+	}
+}

@@ -1,0 +1,335 @@
+namespace = freecities
+
+# Purchased charter
+province_event = {
+	id = freecities.1
+	title = freecities.1.t
+	desc = freecities.1.d
+	picture = HRE_eventPicture
+
+	trigger = {
+		NOT = { has_province_flag = releasable_free_city }
+		owner = {
+			is_core = ROOT
+			capital_scope = { is_part_of_hre = yes }
+			num_of_cities = 2
+			OR = {
+				num_of_loans = 5
+				is_bankrupt = yes
+			}
+		}
+		is_capital = no
+		is_part_of_hre = yes
+		development = 10
+		any_core_country = { exists = no }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			development = 15
+		}
+		modifier = {
+			factor = 0.9
+			development = 20
+		}
+		modifier = {
+			factor = 0.75
+			development = 30
+		}
+		modifier = {
+			factor = 0.9
+			owner = { num_of_loans = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { num_of_loans = 10 }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { is_bankrupt = yes }
+		}
+	}
+
+	immediate = {
+		set_province_flag = releasable_free_city
+		hidden_effect = {
+			if = {
+				limit = {
+					owner = { is_emperor = no }
+				}
+				emperor = {
+					country_event = { id = freecities.5 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = freecities.1.a
+		add_development_scaled_income = yes
+		owner = {
+			add_prestige = -5
+		}
+		custom_tooltip = releasable_free_city_tooltip
+	}
+}
+
+# Charter won by force
+province_event = {
+	id = freecities.2
+	title = freecities.2.t
+	desc = freecities.2.d
+	picture = HRE_eventPicture
+
+	trigger = {
+		NOT = { has_province_flag = releasable_free_city }
+		owner = {
+			is_core = ROOT
+			capital_scope = { is_part_of_hre = yes }
+			num_of_cities = 2
+		}
+		is_capital = no
+		is_part_of_hre = yes
+		development = 10
+		any_core_country = { exists = no }
+		OR = {
+			local_autonomy = 50
+			has_province_modifier = free_city_charter
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			local_autonomy = 60
+		}
+		modifier = {
+			factor = 0.9
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 90
+		}
+		modifier = {
+			factor = 0.75
+			has_province_modifier = free_city_charter
+		}
+	}
+
+	immediate = {
+		set_province_flag = releasable_free_city
+		remove_province_modifier = free_city_charter
+		hidden_effect = {
+			if = {
+				limit = {
+					owner = { is_emperor = no }
+				}
+				emperor = {
+					country_event = { id = freecities.5 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = freecities.1.a
+		owner = { add_prestige = -10 }
+		custom_tooltip = releasable_free_city_tooltip
+	}
+}
+
+# Charter won by dynasty extinction
+country_event = {
+	id = freecities.3
+	title = none
+	desc = none
+	picture = none
+
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		has_heir = no
+		capital_scope = { is_part_of_hre = yes }
+		num_of_cities = 2
+		any_owned_province = {
+			NOT = { has_province_flag = releasable_free_city }
+			is_core = ROOT
+			is_capital = no
+			is_part_of_hre = yes
+			development = 10
+			any_core_country = { exists = no }
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				NOT = { has_province_flag = releasable_free_city }
+				is_core = ROOT
+				is_capital = no
+				is_part_of_hre = yes
+				development = 10
+				any_core_country = { exists = no }
+			}
+			add_province_modifier = {
+				name = "free_city_charter_extinction"
+				duration = 3650
+			}
+		}
+	}
+
+	option = {
+	}
+}
+
+province_event = {
+	id = freecities.4
+	title = freecities.2.t
+	desc = freecities.4.d
+	picture = HRE_eventPicture
+
+	trigger = {
+		has_province_modifier = free_city_charter_extinction
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	immediate = {
+		set_province_flag = releasable_free_city
+		remove_province_modifier = free_city_charter_extinction
+		hidden_effect = {
+			if = {
+				limit = {
+					owner = { is_emperor = no }
+				}
+				emperor = {
+					country_event = { id = freecities.5 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = freecities.1.a
+		add_local_autonomy = 25
+		owner = { add_prestige = -5 }
+		custom_tooltip = releasable_free_city_tooltip
+	}
+}
+
+# Notify Emperor
+country_event = {
+	id = freecities.5
+	title = freecities.5.t
+	desc = freecities.5.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = freecities.5.a
+	}
+}
+
+# on_accept diplomatic action
+province_event = {
+	id = freecities.6
+	title = none
+	desc = none
+	picture = none
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		emperor = {
+			country_event = { id = freecities.7 days = 1 }
+		}
+	}
+
+	option = {
+	}
+}
+
+country_event = {
+	id = freecities.7
+	title = freecities.7.t
+	desc = freecities.7.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = freecities.7.a
+		FROM = {
+			random_core_country = {
+				limit = { exists = no }
+				save_event_target_as = releasable_free_city
+			}
+			cede_province = event_target:releasable_free_city
+			hidden_effect = {
+				event_target:releasable_free_city = {
+					change_government_to_republic = yes
+					add_government_reform = free_city
+					if = {
+						limit = {
+							NOT = { religion = PREV }
+						}
+						change_religion = PREV
+					}
+				}
+			}
+			clr_province_flag = releasable_free_city
+		}
+	}
+
+	option = {
+		name = freecities.7.b
+		FROM = {
+			add_province_modifier = {
+				name = "declined_free_city_status"
+				duration = 30
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					owner = {
+						any_owned_province = {
+							NOT = { id = FROM }
+							NOT = { has_province_modifier = declined_free_city_status }
+							has_province_flag = releasable_free_city
+							any_core_country = { exists = no }
+						}
+					}
+				}
+			}
+			FROM = {
+				owner = {
+					random_owned_province = {
+						limit = {
+							NOT = { id = FROM }
+							NOT = { has_province_modifier = declined_free_city_status }
+							has_province_flag = releasable_free_city
+							any_core_country = { exists = no }
+						}
+						province_event = { id = freecities.6 }
+					}
+				}
+			}
+		}
+		else = {
+			custom_tooltip = no_other_eligible_free_cities_tooltip
+		}
+	}
+}
