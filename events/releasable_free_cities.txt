@@ -1,0 +1,161 @@
+namespace = releasable_free_cities
+
+# Purchased charter
+province_event = {
+	id = releasable_free_cities.1
+	title = releasable_free_cities.1.t
+	desc = releasable_free_cities.1.d
+	picture = HRE_eventPicture
+
+	trigger = {
+		NOT = { has_province_flag = releasable_free_city }
+		owner = {
+			is_core = ROOT
+			capital_scope = { is_part_of_hre = yes }
+			num_of_cities = 2
+			OR = {
+				num_of_loans = 5
+				is_bankrupt = yes
+			}
+		}
+		is_capital = no
+		is_part_of_hre = yes
+		development = 10
+		any_core_country = { exists = no }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			development = 15
+		}
+		modifier = {
+			factor = 0.9
+			development = 20
+		}
+		modifier = {
+			factor = 0.75
+			development = 30
+		}
+		modifier = {
+			factor = 0.9
+			owner = { num_of_loans = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { num_of_loans = 10 }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { is_bankrupt = yes }
+		}
+	}
+
+	immediate = {
+		set_province_flag = releasable_free_city
+	}
+
+	option = {
+		name = releasable_free_cities.1.a
+		custom_tooltip = releasable_free_city
+	}
+}
+
+# Charter won by force
+province_event = {
+	id = releasable_free_cities.2
+	title = releasable_free_cities.2.t
+	desc = releasable_free_cities.2.d
+	picture = HRE_eventPicture
+
+	trigger = {
+		NOT = { has_province_flag = releasable_free_city }
+		owner = {
+			is_core = ROOT
+			capital_scope = { is_part_of_hre = yes }
+			num_of_cities = 2
+		}
+		is_capital = no
+		is_part_of_hre = yes
+		development = 10
+		any_core_country = { exists = no }
+		OR = {
+			local_autonomy = 50
+			has_province_modifier = releasable_free_city
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.9
+			local_autonomy = 60
+		}
+		modifier = {
+			factor = 0.9
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 90
+		}
+		modifier = {
+			factor = 0.75
+			has_province_modifier = releasable_free_city
+		}
+	}
+
+	immediate = {
+		set_province_flag = releasable_free_city
+	}
+
+	option = {
+		name = releasable_free_cities.1.a
+		custom_tooltip = releasable_free_city
+	}
+}
+
+# Charter won by dynasty extinction
+country_event = {
+	id = releasable_free_cities.3
+	title = releasable_free_cities.3.t
+	desc = releasable_free_cities.3.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_heir = no
+		capital_scope = { is_part_of_hre = yes }
+		num_of_cities = 2
+		any_owned_province = {
+			NOT = { has_province_flag = releasable_free_city }
+			is_core = ROOT
+			is_capital = no
+			is_part_of_hre = yes
+			development = 10
+			any_core_country = { exists = no }
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			NOT = { has_province_flag = releasable_free_city }
+			is_core = ROOT
+			is_capital = no
+			is_part_of_hre = yes
+			development = 10
+			any_core_country = { exists = no }
+		}
+		set_province_flag = releasable_free_city
+	}
+
+	option = {
+		name = releasable_free_cities.1.a
+		custom_tooltip = releasable_free_city
+	}
+}
+
