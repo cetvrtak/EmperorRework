@@ -1,0 +1,28 @@
+release_free_city = {
+	FROM = {
+		random_core_country = {
+			limit = { exists = no }
+			save_event_target_as = releasable_free_city
+		}
+
+		cede_province = event_target:releasable_free_city
+		hidden_effect = {
+			add_core = event_target:releasable_free_city
+			event_target:releasable_free_city = {
+				change_government_to_republic = yes
+				add_government_reform = free_city
+				if = {
+					limit = { NOT = { religion = PREV } }
+					change_religion = PREV
+					set_ruler_religion = PREV
+				}
+				if = {
+					limit = { NOT = { primary_culture = PREV } }
+					change_primary_culture = PREV
+					set_ruler_culture = PREV
+				}
+			}
+		}
+		clr_province_flag = releasable_free_city
+	}
+}

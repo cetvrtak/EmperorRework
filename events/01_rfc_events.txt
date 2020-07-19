@@ -282,41 +282,22 @@ country_event = {
 				duration = 30
 				hidden = yes
 			}
+			owner = { save_event_target_as = free_city_owner }
 		}
 	}
 
 	option = {
 		name = freecities.7.a
-		FROM = {
-			random_core_country = {
-				limit = { exists = no }
-				save_event_target_as = releasable_free_city
-			}
-			cede_province = event_target:releasable_free_city
-			hidden_effect = {
-				event_target:releasable_free_city = {
-					change_government_to_republic = yes
-					add_government_reform = free_city
-					if = {
-						limit = {
-							NOT = { religion = PREV }
-						}
-						change_religion = PREV
-					}
-				}
-			}
-			clr_province_flag = releasable_free_city
-		}
+		release_free_city = yes
 	}
 
 	option = {
 		name = freecities.7.b
 		if = {
 			limit = {
-				FROM = {
-					owner = {
+				NOT = {
+					event_target:free_city_owner = {
 						any_owned_province = {
-							NOT = { id = FROM }
 							NOT = { has_province_modifier = offered_free_city_status }
 							has_province_flag = releasable_free_city
 							has_eligible_free_city_tag = yes
@@ -324,24 +305,52 @@ country_event = {
 					}
 				}
 			}
-			hidden_effect = {
-				FROM = {
-					owner = {
-						random_owned_province = {
-							limit = {
-								NOT = { id = FROM }
-								NOT = { has_province_modifier = offered_free_city_status }
-								has_province_flag = releasable_free_city
-								has_eligible_free_city_tag = yes
+			custom_tooltip = no_other_eligible_free_cities_tooltip
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						hre_reform_passed = emperor_reichstag_collegia
+						NOT = {
+							calc_true_if = {
+								all_country = {
+									has_reform = free_city
+								}
+								amount = 15
 							}
-							province_event = { id = freecities.6 }
+						}
+					}
+					NOT = {
+						calc_true_if = {
+							all_country = {
+								has_reform = free_city
+							}
+							amount = 12
 						}
 					}
 				}
+				event_target:free_city_owner = {
+					any_owned_province = {
+						NOT = { has_province_modifier = offered_free_city_status }
+						has_province_flag = releasable_free_city
+						has_eligible_free_city_tag = yes
+					}
+				}
 			}
-		}
-		else = {
-			custom_tooltip = no_other_eligible_free_cities_tooltip
+			event_target:free_city_owner = {
+				random_owned_province = {
+					limit = {
+						NOT = { has_province_modifier = offered_free_city_status }
+						has_province_flag = releasable_free_city
+						has_eligible_free_city_tag = yes
+					}
+					province_event = { id = freecities.6 }
+				}
+			}
 		}
 	}
 }
