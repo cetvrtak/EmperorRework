@@ -1,0 +1,3 @@
+# Free cities
+PLZ = "countries/Plzen.txt"
+ROS = "countries/Rostock.txt"

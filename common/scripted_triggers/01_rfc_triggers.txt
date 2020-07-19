@@ -1,6 +1,8 @@
 has_eligible_free_city_tag = {
 	OR = {
 		any_core_country = { exists = no }
+		AND = { province_id = 267	NOT = { exists = PLZ } }
+		AND = { province_id = 46	NOT = { exists = ROS } }
 	}
 }
 

@@ -1,8 +1,18 @@
 release_free_city = {
 	FROM = {
-		random_core_country = {
-			limit = { exists = no }
-			save_event_target_as = releasable_free_city
+		if = {
+			limit = { province_id = 267 }
+			PLZ = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 46 }
+			ROS = { save_event_target_as = releasable_free_city }
+		}
+		else = {
+			random_core_country = {
+				limit = { exists = no }
+				save_event_target_as = releasable_free_city
+			}
 		}
 
 		cede_province = event_target:releasable_free_city

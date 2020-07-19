@@ -1,0 +1,9 @@
+government = republic
+add_government_reform = free_city
+government_rank = 1
+technology_group = western
+mercantilism = 25
+primary_culture = czech
+religion = catholic
+capital = 267	# Plsen
+fixed_capital = 267 # Cannot move capital away from this province & no power cost to move to it

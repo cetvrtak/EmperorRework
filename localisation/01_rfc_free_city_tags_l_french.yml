@@ -1,0 +1,11 @@
+﻿l_french:
+  PLZ:0 "Pilsen"
+  PLZ_ADJ:0 "pilsenaise"
+  string_PLZ_ADJ_m_FR:0 "pilsenais"
+  string_PLZ_ADJ_fs_FR:0 "pilsenaise"
+  string_PLZ_ADJ_fp_FR:0 "pilsenaises"
+  ROS:0 "Rostock"
+  ROS_ADJ:0 "rostockoise"
+  string_PLZ_ADJ_m_FR:0 "rostockois"
+  string_PLZ_ADJ_fs_FR:0 "rostockoise"
+  string_PLZ_ADJ_fp_FR:0 "rostockoises"
