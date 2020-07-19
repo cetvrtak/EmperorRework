@@ -1,0 +1,5 @@
+has_eligible_free_city_tag = {
+	OR = {
+		any_core_country = { exists = no }
+	}
+}
