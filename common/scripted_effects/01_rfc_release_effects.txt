@@ -1,11 +1,111 @@
 release_free_city = {
 	FROM = {
 		if = {
-			limit = { province_id = 267 }
+			limit = { province_id = 1878 NOT = { exists = AAC } }
+			AAC = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 71 NOT = { exists = ANS } }
+			ANS = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 1868 NOT = { exists = AUG } }
+			AUG = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 1874 NOT = { exists = BRE } }
+			BRE = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 57 NOT = { exists = BRU } }
+			BRU = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 1876 NOT = { exists = FRN } }
+			FRN = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 44 NOT = { exists = HAM } }
+			HAM = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 1758 NOT = { exists = HAN } }
+			HAN = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 2975 NOT = { exists = KLE } }
+			KLE = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 85 NOT = { exists = KOL } }
+			KOL = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 53 NOT = { exists = LUN } }
+			LUN = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 52 NOT = { exists = MAG } }
+			MAG = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 78 NOT = { exists = MAI } }
+			MAI = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 86 NOT = { exists = MUN } }
+			MUN = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 55 NOT = { exists = OLD } }
+			OLD = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 76 NOT = { exists = SLZ } }
+			SLZ = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 80 NOT = { exists = TRI } }
+			TRI = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 1872 NOT = { exists = ULM } }
+			ULM = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 79 NOT = { exists = WBG } }
+			WBG = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 67 NOT = { exists = NUM } }
+			NUM = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 68 NOT = { exists = MEM } }
+			MEM = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4771 NOT = { exists = VER } }
+			VER = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 83 NOT = { exists = NSA } }
+			NSA = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 69 NOT = { exists = RVA } }
+			RVA = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 45 NOT = { exists = HSA } }
+			HSA = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 267 NOT = { exists = PLZ } }
 			PLZ = { save_event_target_as = releasable_free_city }
 		}
 		else_if = {
-			limit = { province_id = 46 }
+			limit = { province_id = 46 NOT = { exists = ROS } }
 			ROS = { save_event_target_as = releasable_free_city }
 		}
 		else = {

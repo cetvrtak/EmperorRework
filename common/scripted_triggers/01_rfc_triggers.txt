@@ -1,8 +1,40 @@
 has_eligible_free_city_tag = {
-	OR = {
-		any_core_country = { exists = no }
-		AND = { province_id = 267	NOT = { exists = PLZ } }
-		AND = { province_id = 46	NOT = { exists = ROS } }
+	custom_trigger_tooltip = {
+		tooltip = has_eligible_free_city_tag_tooltip
+		OR = {
+			any_core_country = { exists = no }
+
+			# Basegame tags
+			AND = { province_id = 1878	NOT = { exists = AAC } }
+			AND = { province_id = 71	NOT = { exists = ANS } }
+			AND = { province_id = 1868	NOT = { exists = AUG } }
+			AND = { province_id = 1874	NOT = { exists = BRE } }
+			AND = { province_id = 57	NOT = { exists = BRU } }
+			AND = { province_id = 1876	NOT = { exists = FRN } }
+			AND = { province_id = 44	NOT = { exists = HAM } }
+			AND = { province_id = 1758	NOT = { exists = HAN } }
+			AND = { province_id = 2975	NOT = { exists = KLE } }
+			AND = { province_id = 85	NOT = { exists = KOL } }
+			AND = { province_id = 53	NOT = { exists = LUN } }
+			AND = { province_id = 52	NOT = { exists = MAG } }
+			AND = { province_id = 78	NOT = { exists = MAI } }
+			AND = { province_id = 86	NOT = { exists = MUN } }
+			AND = { province_id = 55	NOT = { exists = OLD } }
+			AND = { province_id = 76	NOT = { exists = SLZ } }
+			AND = { province_id = 80	NOT = { exists = TRI } }
+			AND = { province_id = 1872	NOT = { exists = ULM } }
+			AND = { province_id = 79	NOT = { exists = WBG } }
+			AND = { province_id = 67	NOT = { exists = NUM } }
+			AND = { province_id = 68	NOT = { exists = MEM } }
+			AND = { province_id = 4771	NOT = { exists = VER } }
+			AND = { province_id = 83	NOT = { exists = NSA } }
+			AND = { province_id = 69	NOT = { exists = RVA } }
+			AND = { province_id = 45	NOT = { exists = HSA } }
+
+			# Added tags
+			AND = { province_id = 267	NOT = { exists = PLZ } }
+			AND = { province_id = 46	NOT = { exists = ROS } }
+		}
 	}
 }
 
