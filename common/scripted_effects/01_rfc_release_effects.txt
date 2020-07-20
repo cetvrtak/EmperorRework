@@ -101,6 +101,132 @@ release_free_city = {
 			HSA = { save_event_target_as = releasable_free_city }
 		}
 		else_if = {
+			limit = { province_id = 65 NOT = { exists = UBV } }
+			UBV = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 64 NOT = { exists = LBV } }
+			LBV = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 2955 NOT = { exists = ING } }
+			ING = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4709 NOT = { exists = PSS } }
+			PSS = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4710 NOT = { exists = MBZ } }
+			MBZ = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4712 NOT = { exists = KNZ } }
+			KNZ = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4715 NOT = { exists = ROT } }
+			ROT = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4717 NOT = { exists = BYT } }
+			BYT = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 2957 NOT = { exists = REG } }
+			REG = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4720 NOT = { exists = GNV } }
+			GNV = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4723 NOT = { exists = OPL } }
+			OPL = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 2966 NOT = { exists = GLG } }
+			GLG = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4730 NOT = { exists = BLG } }
+			BLG = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4729 NOT = { exists = PDV } }
+			PDV = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4727 NOT = { exists = SZO } }
+			SZO = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4731 NOT = { exists = SPL } }
+			SPL = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 2994 NOT = { exists = WOL } }
+			WOL = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 1858 NOT = { exists = STE } }
+			STE = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4742 NOT = { exists = GOS } }
+			GOS = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4751 NOT = { exists = CLI } }
+			CLI = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 110 NOT = { exists = TNT } }
+			TNT = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 84 NOT = { exists = BRG } }
+			BRG = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4765 NOT = { exists = MLH } }
+			MLH = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 66 NOT = { exists = BAM } }
+			BAM = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 51 NOT = { exists = RUP } }
+			RUP = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 2972 NOT = { exists = PAD } }
+			PAD = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4711 NOT = { exists = DWT } }
+			DWT = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 56 NOT = { exists = OSN } }
+			OSN = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 108 NOT = { exists = VRN } }
+			VRN = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4716 NOT = { exists = COB } }
+			COB = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 2976 NOT = { exists = PGA } }
+			PGA = { save_event_target_as = releasable_free_city }
+		}
+
+		# Added tags
+		else_if = {
 			limit = { province_id = 13 NOT = { exists = FLE } }
 			FLE = { save_event_target_as = releasable_free_city }
 		}

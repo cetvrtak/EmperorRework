@@ -30,6 +30,38 @@ has_eligible_free_city_tag = {
 			AND = { province_id = 83	NOT = { exists = NSA } }
 			AND = { province_id = 69	NOT = { exists = RVA } }
 			AND = { province_id = 45	NOT = { exists = HSA } }
+			# 1.30 tags
+			AND = { province_id = 65	NOT = { exists = UBV } }
+			AND = { province_id = 64	NOT = { exists = LBV } }
+			AND = { province_id = 2955	NOT = { exists = ING } }
+			AND = { province_id = 4709	NOT = { exists = PSS } }
+			AND = { province_id = 4710	NOT = { exists = MBZ } }
+			AND = { province_id = 4712	NOT = { exists = KNZ } }
+			AND = { province_id = 4715	NOT = { exists = ROT } }
+			AND = { province_id = 4717	NOT = { exists = BYT } }
+			AND = { province_id = 2957	NOT = { exists = REG } }
+			AND = { province_id = 4720	NOT = { exists = GNV } }
+			AND = { province_id = 4723	NOT = { exists = OPL } }
+			AND = { province_id = 2966	NOT = { exists = GLG } }
+			AND = { province_id = 4730	NOT = { exists = BLG } }
+			AND = { province_id = 4729	NOT = { exists = PDV } }
+			AND = { province_id = 4727	NOT = { exists = SZO } }
+			AND = { province_id = 4731	NOT = { exists = SPL } }
+			AND = { province_id = 2994	NOT = { exists = WOL } }
+			AND = { province_id = 1858	NOT = { exists = STE } }
+			AND = { province_id = 4742	NOT = { exists = GOS } }
+			AND = { province_id = 4751	NOT = { exists = CLI } }
+			AND = { province_id = 110	NOT = { exists = TNT } }
+			AND = { province_id = 84	NOT = { exists = BRG } }
+			AND = { province_id = 4765	NOT = { exists = MLH } }
+			AND = { province_id = 66	NOT = { exists = BAM } }
+			AND = { province_id = 51	NOT = { exists = RUP } }
+			AND = { province_id = 2972	NOT = { exists = PAD } }
+			AND = { province_id = 4711	NOT = { exists = DWT } }
+			AND = { province_id = 56	NOT = { exists = OSN } }
+			AND = { province_id = 108	NOT = { exists = VRN } }
+			AND = { province_id = 4716	NOT = { exists = COB } }
+			AND = { province_id = 2976	NOT = { exists = PGA } }
 
 			# Added tags
 			AND = { province_id = 13	NOT = { exists = FLE } }
