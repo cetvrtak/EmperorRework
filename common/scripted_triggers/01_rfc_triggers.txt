@@ -32,6 +32,10 @@ has_eligible_free_city_tag = {
 			AND = { province_id = 45	NOT = { exists = HSA } }
 
 			# Added tags
+			AND = { province_id = 13	NOT = { exists = FLE } }
+			AND = { province_id = 4141	NOT = { exists = HDE } }
+			AND = { province_id = 4141	NOT = { exists = BBT } }
+			AND = { province_id = 1775	NOT = { exists = KIL } }
 			AND = { province_id = 267	NOT = { exists = PLZ } }
 			AND = { province_id = 46	NOT = { exists = ROS } }
 		}

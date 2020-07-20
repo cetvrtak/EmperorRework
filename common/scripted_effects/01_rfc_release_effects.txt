@@ -101,6 +101,22 @@ release_free_city = {
 			HSA = { save_event_target_as = releasable_free_city }
 		}
 		else_if = {
+			limit = { province_id = 13 NOT = { exists = FLE } }
+			FLE = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4141 NOT = { exists = HDE } }
+			HDE = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4141 NOT = { exists = BBT } }
+			BBT = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 1775 NOT = { exists = KIL } }
+			KIL = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
 			limit = { province_id = 267 NOT = { exists = PLZ } }
 			PLZ = { save_event_target_as = releasable_free_city }
 		}
