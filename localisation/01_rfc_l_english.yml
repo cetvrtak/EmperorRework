@@ -1,8 +1,8 @@
 ﻿l_english:
   freecities.1.t:0 "Free City Charter purchased"
-  freecities.1.d:0 "Aware of our financial difficulties, city magistrates of [Root.GetCapitalName] have aproached us with an offer to buy a Free City Charter for themselves."
+  freecities.1.d:0 "Aware of our financial difficulties, city magistrates of [Root.GetCapitalName] have approached us with an offer to buy a Free City Charter for themselves."
   freecities.1.a:0 "We have no other option but to accept this"
-  freecities.2.t:0 "Free City Charter aquired"
+  freecities.2.t:0 "Free City Charter acquired"
   freecities.2.d:0 "Initially administered by royal/imperial stewards (Vögte), [Root.GetCapitalName] gradually gained independence as their city magistrates assumed the duties of administration and justice."
   freecities.4.d:0 "Taking advantage of the void created by the extinction of our ruling dynasty, city magistrates of [Root.GetCapitalName] have managed to achieve a high level of independence from the central authority."
   freecities.7.t:0 "Grant Free City status"
