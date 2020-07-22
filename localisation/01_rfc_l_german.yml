@@ -25,3 +25,4 @@
   available_free_city_slots_tooltip:0 "Kann den Status einer Reichsstadt gewähren"
   eligible_free_cities_tooltip:0 "Hat förderfähige Reichsstädte"
   grant_free_city_tooltip:0 "Wir werden die Möglichkeit erhalten, jeder Provinz mit einer Reichsstadt Charta den Status einer Reichsstadt zu verleihen."
+  can_have_same_dynasty_heir_tooltip:0 "Kann Erben derselben Dynastie haben"

@@ -141,6 +141,7 @@ country_event = {
 	hidden = yes
 
 	trigger = {
+		can_have_same_dynasty_heir = yes
 		has_heir = no
 		capital_scope = { is_part_of_hre = yes }
 		num_of_cities = 2

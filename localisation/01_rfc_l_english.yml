@@ -25,3 +25,4 @@
   available_free_city_slots_tooltip:0 "Can grant Free City status"
   eligible_free_cities_tooltip:0 "Has eligible Free Cities"
   grant_free_city_tooltip:0 "We will get an opportunity to grant Free City status to every owned province with a Free City Charter."
+  can_have_same_dynasty_heir_tooltip:0 "Can have same dynasty heir"
