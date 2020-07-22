@@ -251,6 +251,18 @@ release_free_city = {
 			PLZ = { save_event_target_as = releasable_free_city }
 		}
 		else_if = {
+			limit = { province_id = 1761 NOT = { exists = WOR } }
+			WOR = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 1761 NOT = { exists = KAI } }
+			KAI = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4767 NOT = { exists = ZWE } }
+			ZWE = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
 			limit = { province_id = 188 NOT = { exists = MET } }
 			MET = { save_event_target_as = releasable_free_city }
 		}
