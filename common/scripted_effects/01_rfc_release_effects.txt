@@ -247,6 +247,22 @@ release_free_city = {
 			ROS = { save_event_target_as = releasable_free_city }
 		}
 		else_if = {
+			limit = { province_id = 100 NOT = { exists = LWR } }
+			LWR = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4382 NOT = { exists = GRO } }
+			GRO = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 4382 NOT = { exists = EMN } }
+			EMN = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 81 NOT = { exists = MRB } }
+			MRB = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
 			limit = { province_id = 267 NOT = { exists = PLZ } }
 			PLZ = { save_event_target_as = releasable_free_city }
 		}

@@ -26,3 +26,4 @@
   eligible_free_cities_tooltip:0 "Tiene ciudades libres elegibles"
   grant_free_city_tooltip:0 "Tendremos la oportunidad de otorgar el estatuto de ciudad libre a todas las provincias con una Carta de ciudad libre."
   can_have_same_dynasty_heir_tooltip:0 "Puede tener heredero de la misma dinastía"
+  has_eligible_free_city_tag_tooltip:0 "Tiene etiquetas de ciudad libre elegibles"

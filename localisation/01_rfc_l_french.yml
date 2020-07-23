@@ -26,3 +26,4 @@
   eligible_free_cities_tooltip:0 "A des villes libres éligibles"
   grant_free_city_tooltip:0 "Nous aurons l'opportunité d'accorder le statut de la ville libre à chaque province possédée avec une charte de la ville libre."
   can_have_same_dynasty_heir_tooltip:0 "Peut avoir héritier de la même dynastie"
+  has_eligible_free_city_tag_tooltip:0 "A des marques de ville libre éligibles"

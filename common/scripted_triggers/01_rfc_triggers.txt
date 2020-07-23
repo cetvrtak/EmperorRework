@@ -69,6 +69,10 @@ has_eligible_free_city_tag = {
 			AND = { province_id = 4141	NOT = { exists = BBT } }
 			AND = { province_id = 1775	NOT = { exists = KIL } }
 			AND = { province_id = 46	NOT = { exists = ROS } }
+			AND = { province_id = 100	NOT = { exists = LWR } }
+			AND = { province_id = 4382	NOT = { exists = GRO } }
+			AND = { province_id = 4382	NOT = { exists = EMN } }
+			AND = { province_id = 81	NOT = { exists = MRB } }
 			AND = { province_id = 267	NOT = { exists = PLZ } }
 			AND = { province_id = 1761	NOT = { exists = WOR } }
 			AND = { province_id = 1761	NOT = { exists = KAI } }
