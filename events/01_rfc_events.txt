@@ -142,7 +142,7 @@ country_event = {
 
 	trigger = {
 		can_have_same_dynasty_heir = yes
-		has_heir = no
+		NOT = { has_country_flag = succession_is_safe }
 		capital_scope = { is_part_of_hre = yes }
 		num_of_cities = 2
 		any_owned_province = {
