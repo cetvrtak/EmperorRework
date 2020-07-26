@@ -25,7 +25,7 @@ province_event = {
 		is_capital = no
 		is_part_of_hre = yes
 		development = 10
-		has_eligible_free_city_tag = yes
+		#has_eligible_free_city_tag = yes
 	}
 
 	mean_time_to_happen = {
@@ -90,7 +90,7 @@ province_event = {
 		is_capital = no
 		is_part_of_hre = yes
 		development = 10
-		has_eligible_free_city_tag = yes
+		#has_eligible_free_city_tag = yes
 		OR = {
 			local_autonomy = 50
 			has_province_modifier = free_city_charter
@@ -151,7 +151,7 @@ country_event = {
 			is_capital = no
 			is_part_of_hre = yes
 			development = 10
-			has_eligible_free_city_tag = yes
+			#has_eligible_free_city_tag = yes
 		}
 	}
 
@@ -163,7 +163,7 @@ country_event = {
 				is_capital = no
 				is_part_of_hre = yes
 				development = 10
-				has_eligible_free_city_tag = yes
+				#has_eligible_free_city_tag = yes
 			}
 			add_province_modifier = {
 				name = "free_city_charter_extinction"
@@ -261,7 +261,7 @@ country_event = {
 						any_owned_province = {
 							NOT = { has_province_modifier = offered_free_city_status }
 							has_province_flag = releasable_free_city
-							has_eligible_free_city_tag = yes
+							#has_eligible_free_city_tag = yes
 						}
 					}
 				}
@@ -298,7 +298,7 @@ country_event = {
 					any_owned_province = {
 						NOT = { has_province_modifier = offered_free_city_status }
 						has_province_flag = releasable_free_city
-						has_eligible_free_city_tag = yes
+						#has_eligible_free_city_tag = yes
 					}
 				}
 			}
@@ -307,7 +307,7 @@ country_event = {
 					limit = {
 						NOT = { has_province_modifier = offered_free_city_status }
 						has_province_flag = releasable_free_city
-						has_eligible_free_city_tag = yes
+						#has_eligible_free_city_tag = yes
 					}
 					province_event = { id = freecities.6 }
 				}
