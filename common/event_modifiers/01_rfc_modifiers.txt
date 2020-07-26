@@ -1,9 +1,9 @@
 free_city_charter = {
-	local_autonomy = 0.1
+	local_autonomy = 0.25
 }
 
 free_city_charter_extinction = {
-	local_autonomy = 0.1
+	local_autonomy = 0.25
 }
 
 offered_free_city_status = {}

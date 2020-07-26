@@ -92,7 +92,7 @@ province_event = {
 		development = 10
 		#has_eligible_free_city_tag = yes
 		OR = {
-			local_autonomy = 50
+			local_autonomy = 60
 			has_province_modifier = free_city_charter
 		}
 	}
@@ -100,10 +100,6 @@ province_event = {
 	mean_time_to_happen = {
 		months = 120
 
-		modifier = {
-			factor = 0.9
-			local_autonomy = 60
-		}
 		modifier = {
 			factor = 0.9
 			local_autonomy = 75
@@ -165,6 +161,7 @@ country_event = {
 				development = 10
 				#has_eligible_free_city_tag = yes
 			}
+			add_local_autonomy = 25
 			add_province_modifier = {
 				name = "free_city_charter_extinction"
 				duration = 3650
