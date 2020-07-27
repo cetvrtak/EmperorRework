@@ -263,6 +263,10 @@ release_free_city = {
 			MRB = { save_event_target_as = releasable_free_city }
 		}
 		else_if = {
+			limit = { province_id = 1760 NOT = { exists = KOB } }
+			KOB = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
 			limit = { province_id = 267 NOT = { exists = PLZ } }
 			PLZ = { save_event_target_as = releasable_free_city }
 		}
@@ -285,6 +289,10 @@ release_free_city = {
 		else_if = {
 			limit = { province_id = 189 NOT = { exists = NCY } }
 			NCY = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
+			limit = { province_id = 152 NOT = { exists = VAR } }
+			VAR = { save_event_target_as = releasable_free_city }
 		}
 		else = {
 			random_core_country = {

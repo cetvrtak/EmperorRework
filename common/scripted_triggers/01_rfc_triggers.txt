@@ -73,12 +73,14 @@ has_eligible_free_city_tag = {
 			AND = { province_id = 4382	NOT = { exists = GRO } }
 			AND = { province_id = 4382	NOT = { exists = EMN } }
 			AND = { province_id = 81	NOT = { exists = MRB } }
+			AND = { province_id = 1760	NOT = { exists = KOB } }
 			AND = { province_id = 267	NOT = { exists = PLZ } }
 			AND = { province_id = 1761	NOT = { exists = WOR } }
 			AND = { province_id = 1761	NOT = { exists = KAI } }
 			AND = { province_id = 4767	NOT = { exists = ZWE } }
 			AND = { province_id = 188	NOT = { exists = MET } }
 			AND = { province_id = 189	NOT = { exists = NCY } }
+			AND = { province_id = 152	NOT = { exists = VAR } }
 		}
 	}
 }
