@@ -6,3 +6,4 @@ mercantilism = 25
 primary_culture = burgundian
 religion = catholic
 capital = 188	# Metz
+fixed_capital = 188

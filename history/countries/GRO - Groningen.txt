@@ -6,3 +6,4 @@ mercantilism = 25
 primary_culture = frisian
 religion = catholic
 capital = 4382	# Groningen
+fixed_capital = 4382

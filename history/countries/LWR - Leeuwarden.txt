@@ -6,3 +6,4 @@ mercantilism = 25
 primary_culture = frisian
 religion = catholic
 capital = 100	# Friesland
+fixed_capital = 100

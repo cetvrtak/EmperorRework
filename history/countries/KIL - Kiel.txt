@@ -6,3 +6,4 @@ mercantilism = 25
 primary_culture = lower_saxon
 religion = catholic
 capital = 1775	# Holstein
+fixed_capital = 1775
