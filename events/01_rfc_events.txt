@@ -204,6 +204,25 @@ province_event = {
 	}
 }
 
+country_event = {
+	id = freecities.5
+	title = none
+	desc = none
+	picture = none
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_country = {
+			limit = { has_country_flag = succession_is_safe }
+			clr_country_flag = succession_is_safe
+		}
+	}
+
+	option = {}
+}
+
 # on_accept diplomatic action
 province_event = {
 	id = freecities.6
