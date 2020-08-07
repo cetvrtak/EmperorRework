@@ -81,10 +81,6 @@ on_new_monarch = {
 		50 = dynastic_events.5
 		25 = harem_events.7		#Failed Policy of Fratricide
 	}
-	if = {
-		limit = { has_country_flag = succession_is_safe }
-		clr_country_flag = succession_is_safe
-	}
 }
 
 # province
@@ -162,23 +158,8 @@ on_province_owner_change = {
 	on_province_owner_change_estate_privileges_effect = yes
 }
 
-on_new_heir = {
-	if = {
-		limit = {
-			capital_scope = { is_part_of_hre = yes }
-			can_have_same_dynasty_heir = yes
-			heir_has_ruler_dynasty = yes
-		}
-		set_country_flag = succession_is_safe
-	}
-}
-
 # country
 on_heir_death = {
-	if = {
-		limit = { has_country_flag = succession_is_safe }
-		clr_country_flag = succession_is_safe
-	}
 	if = {
 		limit = { has_regency = yes }
 		country_event = { id = freecities.3 }
