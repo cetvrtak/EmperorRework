@@ -259,6 +259,10 @@ release_free_city = {
 			EMN = { save_event_target_as = releasable_free_city }
 		}
 		else_if = {
+			limit = { province_id = 2973 NOT = { exists = MEP } }
+			MEP = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
 			limit = { province_id = 81 NOT = { exists = MRB } }
 			MRB = { save_event_target_as = releasable_free_city }
 		}

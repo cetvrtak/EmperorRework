@@ -72,6 +72,7 @@ has_eligible_free_city_tag = {
 			AND = { province_id = 100	NOT = { exists = LWR } }
 			AND = { province_id = 4382	NOT = { exists = GRO } }
 			AND = { province_id = 4382	NOT = { exists = EMN } }
+			AND = { province_id = 2973	NOT = { exists = MEP } }
 			AND = { province_id = 81	NOT = { exists = MRB } }
 			AND = { province_id = 1760	NOT = { exists = KOB } }
 			AND = { province_id = 267	NOT = { exists = PLZ } }
