@@ -29,6 +29,8 @@
   KAI_ADJ:0 "Kaiserslauterer"
   ZWE:0 "Zweibrücken"
   ZWE_ADJ:0 "Zweibrückische"
+  VRD:0 "Verdun"
+  VRD_ADJ:0 "Verduner"
   MET:0 "Metz"
   MET_ADJ:0 "Metzer"
   NCY:0 "Nancy"

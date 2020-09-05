@@ -1,0 +1,9 @@
+government = republic
+add_government_reform = free_city
+government_rank = 1
+technology_group = western
+mercantilism = 25
+primary_culture = burgundian
+religion = catholic
+capital = 4766	# Verdun
+fixed_capital = 4766

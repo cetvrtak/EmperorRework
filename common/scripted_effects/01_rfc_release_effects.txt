@@ -287,6 +287,10 @@ release_free_city = {
 			ZWE = { save_event_target_as = releasable_free_city }
 		}
 		else_if = {
+			limit = { province_id = 4766 NOT = { exists = VRD } }
+			VRD = { save_event_target_as = releasable_free_city }
+		}
+		else_if = {
 			limit = { province_id = 188 NOT = { exists = MET } }
 			MET = { save_event_target_as = releasable_free_city }
 		}
