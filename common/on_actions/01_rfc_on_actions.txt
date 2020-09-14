@@ -205,3 +205,130 @@ on_heir_death = {
 	ladislaus_postumus_heir_died_effect = yes
 }
 
+# ROOT = New vassal, FROM = Overlord
+on_create_vassal = {
+	if = {
+		limit = {
+			has_dlc = "Emperor"
+			FROM = {
+				is_revolutionary = yes
+			}
+		}
+		change_government = republic
+		add_government_reform = junior_revolutionary_republic_reform
+		set_country_flag = had_revolution
+	}
+	if = {
+		limit = {
+			tag = PAP
+		}
+		change_government = theocracy
+		change_religion = catholic
+		add_government_reform = papacy_reform
+		adopt_reform_progress = FROM
+	}
+	if = {
+		limit = {
+			capital_scope = { is_part_of_hre = yes }
+			can_have_same_dynasty_heir = yes
+		}
+		add_country_modifier = {
+			name = rfc_dynasty_not_extinct
+			duration = 30
+			#hidden = yes
+		}
+	}
+}
+
+# ROOT = Overlord, FROM = Minor
+on_dependency_lost = {
+	FROM = {
+		if = {
+			limit = {
+				capital_scope = { is_part_of_hre = yes }
+				can_have_same_dynasty_heir = yes
+			}
+			add_country_modifier = {
+				name = rfc_dynasty_not_extinct
+				duration = 30
+				#hidden = yes
+			}
+		}
+	}
+}
+
+# When a non-native changes government type
+on_government_change = {
+	clr_country_flag = pirate_mutineer_council
+	clr_country_flag = caretaker_revolutionary_government
+	if = {
+		limit = {
+			NOT = { government = monarchy }
+			any_owned_province = {
+				has_province_modifier = domain_of_spouses_family
+			}
+		}
+		random_owned_province = {
+			limit = { has_province_modifier = domain_of_spouses_family }
+			remove_province_modifier = domain_of_spouses_family
+		}
+	}
+	if = {
+		limit = {
+			NOT = { government = monarchy }
+			any_owned_province = {
+				has_province_modifier = home_of_consort
+			}
+		}
+		random_owned_province = {
+			limit = { has_province_modifier = home_of_consort }
+			remove_province_modifier = home_of_consort
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				tag = ENG
+				tag = GBR
+			}
+			any_owned_province = {
+				has_province_modifier = rotten_borough
+			}
+		}
+		every_owned_province = {
+			limit = {
+				has_province_modifier = rotten_borough
+			}
+			remove_province_modifier = rotten_borough
+		}
+	}
+	if = {
+		limit = { has_country_modifier = the_reign_of_terror }
+		remove_country_modifier = the_reign_of_terror
+	}
+	if = {
+		limit = {
+			has_global_flag = great_peasants_war_flag
+			is_part_of_hre = yes
+			has_reform = peasants_republic
+		}
+		1 = {
+			change_variable = {
+				which = GPW_counting_variable
+				value = -3
+			}
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = { is_part_of_hre = yes }
+			can_have_same_dynasty_heir = yes
+		}
+		add_country_modifier = {
+			name = rfc_dynasty_not_extinct
+			duration = 30
+			#hidden = yes
+		}
+	}
+}
+

@@ -7,3 +7,4 @@ free_city_charter_extinction = {
 }
 
 offered_free_city_status = {}
+rfc_dynasty_not_extinct = {}

@@ -134,9 +134,10 @@ country_event = {
 	picture = none
 
 	is_triggered_only = yes
-	hidden = yes
+	major = yes
 
 	trigger = {
+		NOT = { has_country_modifier = rfc_dynasty_not_extinct }
 		can_have_same_dynasty_heir = yes
 		has_new_dynasty	= yes
 		capital_scope = { is_part_of_hre = yes }
